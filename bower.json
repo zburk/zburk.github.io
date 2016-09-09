@@ -1,0 +1,23 @@
+{
+  "name": "zacharyburk",
+  "authors": [
+    "Zachary Burk <zachburk7@gmail.com>"
+  ],
+  "description": "Dependencies for zacharyburk.com",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8"
+  }
+}
