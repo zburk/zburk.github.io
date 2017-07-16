@@ -70,7 +70,6 @@ app.controller('ViewPortfolioController', function($scope) {
     {
       title: 'Collections JA',
       img: 'collectionsja.png',
-      url: 'http://zburk.x10.mx/collectionsja/',
       type: 'wordpress',
       color: '#5D8CAE',
       data: {
@@ -80,7 +79,6 @@ app.controller('ViewPortfolioController', function($scope) {
     {
       title: 'Barter Street',
       img: 'barterstreet.png',
-      url: 'http://zburk.x10.mx/bs-wp/',
       type: 'wordpress',
       color: '#19B5FE',
       data: {
