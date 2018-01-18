@@ -3,73 +3,145 @@
 <head>
 	<title>Home</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
  	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
-<body ng-app="portfolio">
-	<div ng-controller="ViewPortfolioController">
-		<div class="container">
-			<div class="col-md-12"><h1>Zachary Burk <small>Web Developer</small></h1></div>
+<body class="home-page">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Burk Development</a>
+      </div>
 
-      <div class="col-md-8">
-        <ul class="key">
-            <li><i class="glyphicon glyphicon-stop laravel-icon"></i> Laravel</li>
-            <li><i class="fa fa-drupal drupal-icon"></i> Drupal</li>
-            <li><i class="fa fa-wordpress wordpress-icon"></i> WordPress</li>
-            <li><i class="fa fa-html5 html-icon"></i> HTML5</li>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
       </div>
-      <div class="form-group col-md-4">
-        <input ng-model="search.type" placeholder="Search by Project Type" class="form-control">
+    </div>
+  </nav>
+  <div class="row landing-bg">
+    <div class="container">
+    	<div class="col-md-12">
+        <h1>Zachary Burk <small>Web Developer</small></h1>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-4 col-sm-6" ng-repeat="portfolio in portfolios | filter:search:strict">
+  <div class="about row">
+    <div class="container">
+      <div class="col-md-6">
+        <h2>I'm Zach and am completing my degree in Computer Science at the University of North Carolina at Chapel Hill.</h2>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/img/me.jpg" class="img-responsive">
+      </div>
+    </div>
+  </div>
 
-      <!-- Button trigger modal -->
-      <a href="#" data-toggle="modal" data-target="#myModal-{{$index}}">
-        <figure
-          class="tint"
-          ng-class="{
-            'drupal': portfolio.type === 'drupal',
-            'laravel': portfolio.type === 'laravel',
-            'wordpress': portfolio.type === 'wordpress',
-            'html': portfolio.type === 'HTML'
-          }">
-          <img ng-src="assets/img/{{ portfolio.img }}" alt="..."  class="portfolio-image">
-          <div class="text">
-            <span class="title">{{ portfolio.title }}</span><br />
-            <span class="additional">{{ portfolio.type }}</span>
-          </div>
-        </figure>
-      </a>
+  <div class="personalize row">
+    <div class="container">
+      <div class="col-md-6">
+        <img src="assets/img/personalize.jpg" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>I'll work with you to create a website for your personal needs or to represent your business.</h2>
+      </div>
+    </div>
+  </div>
 
-      <!-- Modal Information-->
-      <div class="modal fade" id="myModal-{{$index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{{$index}}">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel-{{$index}}">{{ portfolio.title }}</h4>
+  <div class="row tag">
+    <p class="text-center">Personalize <em>your</em> website to your desires</p>
+  </div>
+
+  <div class="wordpress row">
+    <div class="container">
+      <div class="col-md-6">
+        <h1 class="text-center">WordPress Integration</h1>
+        <p class="text-center"><i class="fab fa-wordpress fa-10x"></i></p>
+      </div>
+      <div class="col-md-6">
+        <p class="lead">Want a simple way to make changes yourself? Integrate your website with WordPress and I can walk you through how to use it. WordPress makes it easy to create pages, write blog posts, and more.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hosting row">
+    <div class="container">
+      <div class="col-md-6">
+        <p class="lead">With hundreds of hosting companies out there, it's difficult to know which one to pick. We'll provide a quality, affordable host to use to make the process as easy as possible. All you need to do is purchase your domain and we'll take it from there.</p>
+      </div>
+      <div class="col-md-6">
+        <h1 class="text-center">Don't worry about hosting</h1>
+        <img src="assets/img/hosting.jpg" class="img-responsive">
+      </div>
+    </div>
+  </div>
+
+  <div class="domain row">
+    <div class="container">
+      <div class="col-md-6">
+        <h1 class="text-center">Own Your Domain</h1>
+      </div>
+      <div class="col-md-6">
+        <p class="lead">Why buy your own domain? It protects you in the event you choose to move to a different provider, you won't need to worry about losing your domain name.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintenance row">
+    <div class="container">
+      <div class="col-md-6">
+        <p class="lead">
+          Once your website is up and running, you can opt for us to help you maintain the site
+        </p>
+        <ul class="lead">
+          <li>Plugin Updates</li>
+          <li>Security Fixes</li>
+          <li>Small content updates</li>
+        </ul>
+        <p class="lead">
+          If you host with us, we'll give you the added benefit of free monthly maintenance for up to 2 hours of working time per month.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h1 class="text-center">Maintenance</h1>
+        <img src="assets/img/maintenance.jpg" class="img-responsive">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact row">
+    <div class="container">
+      <div class="col-md-6">
+          <h1 class="text-center">Contact</h1>
+        </div>
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Email">
             </div>
-            <div class="modal-body">
-              <span ng-if="portfolio.data.description">{{ portfolio.data.description }}</span>
-              <span ng-if="!portfolio.data.description">Information coming!</span>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Message</label>
+              <textarea class="form-control" rows="3" placeholder="Message"></textarea>
             </div>
-            <div class="modal-footer">
-              <a ng-if="portfolio.url" href="{{portfolio.url}}" target="_blank"><button class="btn btn-primary">Visit</button></a>
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
         </div>
       </div>
     </div>
-	</div>
+  </div>
 
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" type="text/javascript"></script>
-	<script src="assets/js/app.js" type="text/javascript"></script>
 </body>
 </html>

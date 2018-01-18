@@ -1,5 +1,60 @@
 h2 {
-    font-size: 24px;
+  font-size: 24px;
+}
+
+.lead {
+  color: #000;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.home-page .row {
+  padding: 50px 0px 50px 0px;
+  min-height: 400px;
+}
+
+.home-page .row h1 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.home-page .row h2 {
+  margin-top: 0px;
+  vertical-align: text-top;
+  height: 400px;
+}
+
+.home-page .about {
+  background-color: #7BAFD4;
+}
+
+.home-page .about img {
+  padding: 30px 30px 30px 30px;
+  width: 80%;
+}
+
+.home-page .tag {
+  background-color: #2980b9;
+  line-height: 400px;
+  font-size: 39px;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  color: inherit;
+}
+
+.home-page .hosting {
+  background-color: #ecf0f1;
+}
+
+.home-page .maintenance {
+  background-color: #7f8c8d;
+}
+
+.landing-bg {
+  background: url('../img/background.jpg');
+  background-size: cover;
 }
 
 .portfolio {
